@@ -9,25 +9,30 @@ import java.util.Scanner;
 public class Game {
 
     private static Scanner scan;
-    private static int AAAA, AAAB, AAAC, AAAD, AAAE, AAAF, AAAG;
-    private static boolean running;
-    private static String userInput, chosenStory;
+    //private static int AAAA, AAAB, AAAC, AAAD, AAAE, AAAF, AAAG; also not used yet
+    private static boolean running, firstRun;
+    private static String currentStory, nextStory, userInput;
+
 
     public static void Adventure() {
-        Util.storyString("1");
 
         running = true;
+        firstRun = true;
+        currentStory = "1";
+
         while (running) {
+
+            Util.storyString(currentStory);
             scan = new Scanner(System.in);
             userInput = scan.nextLine();
-            Util.newStoryString(userInput);
 
-            chosenStory = Util.newStoryString(userInput);
-            Util.storyString(chosenStory);
+            nextStory = Util.newStoryString(userInput, currentStory);
+            currentStory = nextStory;
         }
     }
 }
-        /*AAAA = scan.nextInt();
+// Not used yet
+/*AAAA = scan.nextInt();
         switch (AAAA) {
             case 1:
                 Util.storyString("2");

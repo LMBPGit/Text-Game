@@ -13,7 +13,7 @@ public class Util {
     private static ObjectInputStream objin = null;
     private static Player returnPlayer;
     private static String nextStory;
-    private static String currentStory = "1";
+    private static String currentStory;
 
     public static void savePlayer(Player player){
         ObjectOutputStream objout = null;
@@ -115,7 +115,7 @@ public class Util {
         return currentStory;
     }
 
-    public static String newStoryString(String userInput){
+    public static String newStoryString(String userInput, String currentStory){
 
         try {
 
@@ -124,13 +124,14 @@ public class Util {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             StringBuffer stringBuffer = new StringBuffer();
             String line;
+
             while ((line = bufferedReader.readLine()) != null) {
-                if(userInput.equalsIgnoreCase("1")) {
+                if(userInput.equals("1")) {
                     if (line.contains("valgA")) {
                         stringBuffer.append(line);
                     }
                 }
-                if (userInput.equalsIgnoreCase("2")){
+                if (userInput.equals("2")){
                     if (line.contains("valgB")) {
                         stringBuffer.append(line);
                     }
@@ -138,11 +139,13 @@ public class Util {
             }
 
             fileReader.close();
+
             nextStory = stringBuffer.toString();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println(nextStory);
         return nextStory;
     }
 
