@@ -22,7 +22,10 @@ public class Game {
 
         while (running) {
 
-            Util.storyString(currentStory);
+            if(Util.storyString(currentStory).equals("DEATH")){
+                running = false;
+                System.out.println("press any key to continue");
+            }
             scan = new Scanner(System.in);
             userInput = scan.nextLine();
 

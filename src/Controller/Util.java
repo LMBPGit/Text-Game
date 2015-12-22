@@ -14,6 +14,7 @@ public class Util {
     private static Player returnPlayer;
     private static String nextStory;
     private static String currentStory;
+    private static boolean alive;
 
     public static void savePlayer(Player player){
         ObjectOutputStream objout = null;
@@ -97,9 +98,13 @@ public class Util {
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
                 StringBuffer stringBuffer = new StringBuffer();
                 String line;
+                alive = true;
 
                 while ((line = bufferedReader.readLine()) != null) {
-                    if(line.contains("stop")){
+                    if(line.contains("stop")) {
+                        break;
+                    }if(line.contains("DEATH")) {
+                        alive = false;
                         break;
                     }else {
                         stringBuffer.append(line);
@@ -112,7 +117,11 @@ public class Util {
         } catch (IOException e){
             e.printStackTrace();
         }
-        return currentStory;
+        if(alive) {
+            return currentStory;
+        }else{
+            return "DEATH";
+        }
     }
 
     public static String newStoryString(String userInput, String currentStory){
