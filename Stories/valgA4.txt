@@ -1,0 +1,8 @@
+You are placed into a cage on a cart
+and are now on your way to the evil castle.
+
+1. fall asleep
+2. try to pick the lock(Ranger only)
+stop
+
+valgB10Event

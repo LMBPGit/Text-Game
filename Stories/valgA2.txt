@@ -4,5 +4,6 @@ You fight bravely, but are deafeated by a man clad in dark armor.
 2: Resist capture.
 
 stop
+valgA4
 
 valgB5

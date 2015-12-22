@@ -145,6 +145,7 @@ public class Util {
                         stringBuffer.append(line);
                     }
                 }
+
             }
 
             fileReader.close();
@@ -155,9 +156,12 @@ public class Util {
             e.printStackTrace();
         }
         System.out.println(nextStory);
-        return nextStory;
+        if(nextStory.contains("Event")){
+            return "event";
+        }else {
+            return nextStory;
+        }
     }
-
 
     public enum playerRaces {
         HUMAN("Human race"),

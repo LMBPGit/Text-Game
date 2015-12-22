@@ -29,8 +29,12 @@ public class Game {
             scan = new Scanner(System.in);
             userInput = scan.nextLine();
 
-            nextStory = Util.newStoryString(userInput, currentStory);
-            currentStory = nextStory;
+            //if(Util.newStoryString(userInput, currentStory).equals("event")){
+
+            //}else {
+                nextStory = Util.newStoryString(userInput, currentStory);
+                currentStory = nextStory;
+            //}
         }
     }
 }
