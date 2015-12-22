@@ -1,0 +1,11 @@
+Story start
+
+You wake up to the sounds of your village being attacked
+
+1: Take your weapon and fight for your village.
+2: Run like a coward.
+stop
+
+valgA2
+
+valgB3

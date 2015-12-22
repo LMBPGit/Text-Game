@@ -1,0 +1,8 @@
+You fight bravely, but are deafeated by a man clad in dark armor.
+
+1: Give up and be taken as a prisoner.
+2: Resist capture.
+
+stop
+
+valgB5
