@@ -1,5 +1,6 @@
 package View;
 
+import Controller.Events;
 import Controller.Util;
 import java.util.Scanner;
 
@@ -10,15 +11,15 @@ public class Game {
 
     private static Scanner scan;
     //private static int AAAA, AAAB, AAAC, AAAD, AAAE, AAAF, AAAG; also not used yet
-    private static boolean running, firstRun;
+    private static boolean running, eventCleared;
     private static String currentStory, nextStory, userInput;
 
 
     public static void Adventure() {
 
         running = true;
-        firstRun = true;
         currentStory = "1";
+
 
         while (running) {
 
@@ -29,12 +30,18 @@ public class Game {
             scan = new Scanner(System.in);
             userInput = scan.nextLine();
 
-            //if(Util.newStoryString(userInput, currentStory).equals("event")){
+            nextStory = Util.newStoryString(userInput, currentStory);
 
-            //}else {
-                nextStory = Util.newStoryString(userInput, currentStory);
+            if(nextStory.contains("Event")) {
+                if(Util.selectEvent(nextStory)){
+                    currentStory = nextStory;
+                }else{
+                    System.out.println("You cant do that");
+                }
+
+            }else{
                 currentStory = nextStory;
-            //}
+            }
         }
     }
 }

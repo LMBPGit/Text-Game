@@ -52,6 +52,8 @@ public class GameMenu  {
                                         System.out.println();
                                         break;
                                 case 3:
+                                        player = Util.loadPlayer();
+                                        System.out.println(player.getPlayerJob());
                                         Game.Adventure();
                                         break;
                                 case 4:

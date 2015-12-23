@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a63ffa3-c049-4c95-a83c-76d66c83531b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stories/valgA2.txt" afterPath="$PROJECT_DIR$/Stories/valgA2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Events.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Stories/valgB10Event.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyCode/Controller/Util$playerJobs.class" afterPath="$PROJECT_DIR$/out/production/MyCode/Controller/Util$playerJobs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyCode/Controller/Util$playerRaces.class" afterPath="$PROJECT_DIR$/out/production/MyCode/Controller/Util$playerRaces.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyCode/Controller/Util.class" afterPath="$PROJECT_DIR$/out/production/MyCode/Controller/Util.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyCode/View/Game.class" afterPath="$PROJECT_DIR$/out/production/MyCode/View/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyCode/View/GameMenu.class" afterPath="$PROJECT_DIR$/out/production/MyCode/View/GameMenu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlayerFiles/.txt" afterPath="$PROJECT_DIR$/PlayerFiles/.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stories/valgA4.txt" afterPath="$PROJECT_DIR$/Stories/valgA4.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Util.java" afterPath="$PROJECT_DIR$/src/Controller/Util.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/Game.java" afterPath="$PROJECT_DIR$/src/View/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GameMenu.java" afterPath="$PROJECT_DIR$/src/View/GameMenu.java" />
     </list>
     <ignored path="MyCode.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameMenu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/GameMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3949417">
-              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+            <state vertical-scroll-proportion="-7.148148">
+              <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -50,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/View/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
               <folding>
                 <element signature="docComment;class#Game#0" expanded="false" />
               </folding>
@@ -62,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/Controller/Util.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="38" />
+              <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
               <folding>
                 <element signature="docComment;class#Util#0" expanded="false" />
                 <element signature="method#savePlayer#0;class#Util#0" expanded="false" />
@@ -70,9 +80,20 @@
                 <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
                 <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
                 <element signature="method#storyString#0;class#Util#0" expanded="false" />
+                <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
                 <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
                 <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Events.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Events.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73540854">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,9 +134,10 @@
         <option value="$PROJECT_DIR$/src/GameMenu.java" />
         <option value="$PROJECT_DIR$/src/RunGame.java" />
         <option value="$PROJECT_DIR$/src/Model/Player.java" />
+        <option value="$PROJECT_DIR$/src/View/Game.java" />
         <option value="$PROJECT_DIR$/src/View/GameMenu.java" />
         <option value="$PROJECT_DIR$/src/Controller/Util.java" />
-        <option value="$PROJECT_DIR$/src/View/Game.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Events.java" />
       </list>
     </option>
   </component>
@@ -157,6 +179,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -245,8 +269,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -551,7 +573,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33028722" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2924282" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2924282" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -581,7 +603,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controller/Util.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -590,17 +620,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RunGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -638,6 +657,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -692,6 +712,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -746,6 +767,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -800,6 +822,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -854,6 +877,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -898,6 +922,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -942,6 +967,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -986,6 +1012,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -1030,6 +1057,7 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
@@ -1076,6 +1104,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1087,18 +1123,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RunGame.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GameMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.148148">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="docComment;class#Game#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="38" />
+          <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
           <folding>
             <element signature="docComment;class#Util#0" expanded="false" />
             <element signature="method#savePlayer#0;class#Util#0" expanded="false" />
@@ -1106,26 +1152,17 @@
             <element signature="method#loadPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#viewPlayer#0;class#Util#0" expanded="false" />
             <element signature="method#storyString#0;class#Util#0" expanded="false" />
+            <element signature="method#newStoryString#0;class#Util#0" expanded="false" />
             <element signature="class#playerRaces#0;class#Util#0" expanded="false" />
             <element signature="class#playerJobs#0;class#Util#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/Events.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding>
-            <element signature="docComment;class#Game#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GameMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3949417">
-          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.73540854">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

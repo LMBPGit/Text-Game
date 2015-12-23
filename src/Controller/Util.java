@@ -14,7 +14,7 @@ public class Util {
     private static Player returnPlayer;
     private static String nextStory;
     private static String currentStory;
-    private static boolean alive;
+    private static boolean alive, eventCleared;
 
     public static void savePlayer(Player player){
         ObjectOutputStream objout = null;
@@ -156,11 +156,21 @@ public class Util {
             e.printStackTrace();
         }
         System.out.println(nextStory);
-        if(nextStory.contains("Event")){
-            return "event";
-        }else {
+
             return nextStory;
         }
+
+    public static boolean selectEvent(String nextStory){
+        if(nextStory.contains("RangerEvent")){
+            eventCleared = Events.isClassRanger();
+        }
+        if(nextStory.contains("WarriorEvent")){
+
+        }
+        if(nextStory.contains("MageEvent")){
+
+        }
+        return eventCleared;
     }
 
     public enum playerRaces {
@@ -181,7 +191,7 @@ public class Util {
     public enum playerJobs {
         WARRIOR("Warrior"),
         RANGER("Ranger"),
-        WIZARD("Wizard");
+        WIZARD("Mage");
 
         public String chosenPlayerJob;
 
