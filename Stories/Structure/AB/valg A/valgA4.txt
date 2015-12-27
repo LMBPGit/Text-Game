@@ -7,4 +7,4 @@ stop
 
 valgA10
 
-valgB11RangerJobEvent
+valgB11RangerEvent

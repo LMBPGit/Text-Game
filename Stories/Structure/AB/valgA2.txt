@@ -8,4 +8,4 @@ valgA4
 
 valgB5
 
-valgC6JobWarriorEvent
+valgC6WarriorEvent

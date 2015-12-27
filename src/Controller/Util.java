@@ -135,17 +135,22 @@ public class Util {
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {
-                if(userInput.equals("1")) {
-                    if (line.contains("valgA")) {
-                        stringBuffer.append(line);
-                    }
+
+                if (line.contains("valg"+userInput.toUpperCase())) {
+                    stringBuffer.append(line);
                 }
-                if (userInput.equals("2")){
-                    if (line.contains("valgB")) {
+
+                if (userInput.equals("1")){
+                    if(line.contains("valgA")){
                         stringBuffer.append(line);
                     }
                 }
 
+                if (userInput.equals("2")){
+                    if(line.contains("valgB")){
+                        stringBuffer.append(line);
+                    }
+                }
             }
 
             fileReader.close();
@@ -159,19 +164,6 @@ public class Util {
 
             return nextStory;
         }
-
-    public static boolean selectEvent(String nextStory){
-        if(nextStory.contains("RangerEvent")){
-            eventCleared = Events.isClassRanger();
-        }
-        if(nextStory.contains("WarriorEvent")){
-
-        }
-        if(nextStory.contains("MageEvent")){
-
-        }
-        return eventCleared;
-    }
 
     public enum playerRaces {
         HUMAN("Human race"),

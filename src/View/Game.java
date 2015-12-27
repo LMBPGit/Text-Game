@@ -33,7 +33,7 @@ public class Game {
             nextStory = Util.newStoryString(userInput, currentStory);
 
             if(nextStory.contains("Event")) {
-                if(Util.selectEvent(nextStory)){
+                if(Events.selectEvent(nextStory)){
                     currentStory = nextStory;
                 }else{
                     System.out.println("You cant do that");
