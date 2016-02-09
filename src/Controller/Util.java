@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Player;
+import View.Game;
+
 import java.io.*;
 
 
@@ -9,14 +11,28 @@ import java.io.*;
  */
 public class Util {
 
+    private static String nextStory;
+    private static String currentStoryName;
+    public static String thisStory;
+    private static boolean alive, eventCleared;
     private static File playerFile, file;
     private static File playerDir = new File("PlayerFiles");
     private static ObjectInputStream objin = null;
-    private static Player returnPlayer;
-    private static String nextStory;
-    private static String currentStoryName;
-    private static boolean alive, eventCleared;
-    public static String thisStory;
+    private static Player player;
+    //private static Player returnPlayer; BRUGES DEN?!?!
+
+
+    public static File createPlayerFile(){
+        try {
+            playerFile = new File(System.getProperty("user.dir") + "/PlayerFiles/" + ".txt"); //creates player file, can it run on android?
+            playerFile.createNewFile();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            return playerFile;
+        }
+    }
 
     public static void savePlayer(Player player){
         ObjectOutputStream objout = null;
@@ -36,18 +52,6 @@ public class Util {
             }
         }
 
-    }
-
-    public static File createPlayerFile(){
-        try {
-            playerFile = new File(System.getProperty("user.dir") + "/PlayerFiles/" + ".txt"); //creates player file, can it run on android?
-            playerFile.createNewFile();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        finally {
-            return playerFile;
-        }
     }
 
     public static Player loadPlayer(){
@@ -168,6 +172,11 @@ public class Util {
             return nextStory;
         }
 
+    public static void loadGame(){
+        player = loadPlayer();
+        Game.currentStoryName = player.getSavePoint();
+    }
+
     public enum playerRaces {
         HUMAN("Human race"),
         Elf("Elvish race"),
@@ -197,5 +206,7 @@ public class Util {
             this.chosenPlayerJob = chosenPlayerJob;
         }
     }
+
+
 
 }

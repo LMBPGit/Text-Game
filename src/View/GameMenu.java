@@ -28,7 +28,7 @@ public class GameMenu  {
                         mainMenu = scan.nextInt();
                         switch(mainMenu) {
                                 case 1:
-                                        Player player = new Player("", 0, 0);
+                                        Player player = new Player("", 0, 0, "");
                                         scan = new Scanner(System.in);
 
                                         System.out.println("\nWhat is your name?");
@@ -53,13 +53,26 @@ public class GameMenu  {
                                         System.out.println();
                                         break;
                                 case 3:
-                                        player = Util.loadPlayer();
-                                        System.out.println(player.getPlayerJob());
-                                        Game.Adventure();
+                                        //player = Util.loadPlayer();
+                                        System.out.println(" 1: Continue Game\n 2: Start new Game");
+                                        scan = new Scanner(System.in);
+                                        mainMenu = scan.nextInt();
+                                        switch(mainMenu){
+                                                case 1:
+                                                        System.out.println("Game loaded");
+                                                        Util.loadGame();
+                                                        Game.Adventure();
+                                                        break;
+                                                case 2:
+                                                        System.out.println("New game initiated");
+                                                        Game.currentStoryName = "1";
+                                                        Game.Adventure();
+                                                        break;
+                                }
                                         break;
+
                                 case 4:
-                                        Events.check();
-                                        //runningMenu = false;
+                                        runningMenu = false;
                                         break;
                         }
                 }

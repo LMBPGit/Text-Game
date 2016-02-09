@@ -13,14 +13,13 @@ public class Game {
     //private static int AAAA, AAAB, AAAC, AAAD, AAAE, AAAF, AAAG; also not used yet
     private static boolean eventCleared;
     public static boolean runningGame;
-    private static String currentStoryName, nextStory, userInput;
+    private static String nextStory, userInput;
+    public static String currentStoryName;
 
 
     public static void Adventure() {
 
         runningGame = true;
-        currentStoryName = "1";
-
 
         while (runningGame) {
 
@@ -37,6 +36,7 @@ public class Game {
                 }
             }else{
                 currentStoryName = nextStory;
+                System.out.println(nextStory);
             }
         }
     }

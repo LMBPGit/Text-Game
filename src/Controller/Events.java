@@ -93,25 +93,6 @@ public class Events {
         System.out.println("\nYou Died\n");
         Game.runningGame = false;
 
-
     }
-
-    public static void check(){
-
-        int heyk = 0;
-        System.out.println("egwaf");
-        for (int i = 0 ; i < 10 ; i++) {
-
-
-            Random hey = new Random();
-
-            heyk = heyk + hey.nextInt(10);
-
-
-
-            System.out.println("You rolled: " + heyk);
-        }
-    }
-
 
 }
