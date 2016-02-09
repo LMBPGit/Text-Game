@@ -11,36 +11,32 @@ public class Game {
 
     private static Scanner scan;
     //private static int AAAA, AAAB, AAAC, AAAD, AAAE, AAAF, AAAG; also not used yet
-    private static boolean running, eventCleared;
-    private static String currentStory, nextStory, userInput;
+    private static boolean eventCleared;
+    public static boolean runningGame;
+    private static String currentStoryName, nextStory, userInput;
 
 
     public static void Adventure() {
 
-        running = true;
-        currentStory = "1";
+        runningGame = true;
+        currentStoryName = "1";
 
 
-        while (running) {
+        while (runningGame) {
 
-            if(Util.storyString(currentStory).equals("DEATH")){
-                running = false;
-                System.out.println("press any key to continue");
-            }
+            Util.storyString(currentStoryName);
+
             scan = new Scanner(System.in);
             userInput = scan.nextLine();
 
-            nextStory = Util.newStoryString(userInput, currentStory);
+            nextStory = Util.newStoryString(userInput, currentStoryName);
 
             if(nextStory.contains("Event")) {
-                if(Events.selectEvent(nextStory)){
-                    currentStory = nextStory;
-                }else{
-                    System.out.println("You cant do that");
+                if (Events.selectEvent(nextStory)){
+                    currentStoryName = nextStory;
                 }
-
             }else{
-                currentStory = nextStory;
+                currentStoryName = nextStory;
             }
         }
     }

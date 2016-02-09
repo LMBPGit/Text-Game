@@ -1,11 +1,11 @@
 You fight bravely, but are deafeated by a man clad in dark armor.
 
 1: Give up and be taken as a prisoner.
-2: Resist capture.
+2: Resist capture.(throw 5 or higher to succeed)
 
 stop
 valgA4
 
-valgB5
+valgB5DiceEvent5
 
 valgC6JobWarriorEvent

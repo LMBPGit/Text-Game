@@ -3,6 +3,7 @@ package View;
 /**
  * Created by Razer on 18-12-2015.
  */
+import Controller.Events;
 import Controller.Util;
 import Model.Player;
 
@@ -13,13 +14,13 @@ public class GameMenu  {
         private static Scanner scan;
         private static int mainMenu, newPlayerRace, newPlayerJob;
         private static String newPlayerName;
-        private static boolean running;
+        private static boolean runningMenu;
 
         public static void menu(){
 
-                running = true;
+                runningMenu = true;
                 Util.createPlayerFile();
-                while(running){
+                while(runningMenu){
 
                         System.out.println("Welcome to the world of JAVA");
                         System.out.println(" 1: Create new Player \n 2: View Player \n 3: Play the Game \n 4: Quit");
@@ -57,7 +58,8 @@ public class GameMenu  {
                                         Game.Adventure();
                                         break;
                                 case 4:
-                                        running = false;
+                                        Events.check();
+                                        //runningMenu = false;
                                         break;
                         }
                 }

@@ -3,6 +3,7 @@ package Controller;
 import Model.Player;
 import java.io.*;
 
+
 /**
  * Created by Razer on 18-12-2015.
  */
@@ -13,8 +14,9 @@ public class Util {
     private static ObjectInputStream objin = null;
     private static Player returnPlayer;
     private static String nextStory;
-    private static String currentStory;
+    private static String currentStoryName;
     private static boolean alive, eventCleared;
+    public static String thisStory;
 
     public static void savePlayer(Player player){
         ObjectOutputStream objout = null;
@@ -89,11 +91,11 @@ public class Util {
         return playerExist;
     }
 
-    public static String storyString(String currentStory){
+    public static String storyString(String currentStoryName){
 
         try {
 
-                File file = new File("Stories/" + currentStory + ".txt");
+                File file = new File("Stories/" + currentStoryName + ".txt");
                 FileReader fileReader = new FileReader(file);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
                 StringBuffer stringBuffer = new StringBuffer();
@@ -111,6 +113,7 @@ public class Util {
                         stringBuffer.append("\n");
                     }
                 }
+                thisStory = stringBuffer.toString();
                 System.out.println(stringBuffer.toString());
                 fileReader.close();
 
@@ -118,17 +121,17 @@ public class Util {
             e.printStackTrace();
         }
         if(alive) {
-            return currentStory;
+            return thisStory;
         }else{
             return "DEATH";
         }
     }
 
-    public static String newStoryString(String userInput, String currentStory){
+    public static String newStoryString(String userInput, String currentStoryName){
 
         try {
 
-            File file = new File("Stories/" + currentStory + ".txt");
+            File file = new File("Stories/" + currentStoryName + ".txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             StringBuffer stringBuffer = new StringBuffer();
@@ -136,7 +139,7 @@ public class Util {
 
             while ((line = bufferedReader.readLine()) != null) {
 
-                if (line.contains("valg"+userInput.toUpperCase())) {
+                if (line.contains("valg" + userInput.toUpperCase())) {
                     stringBuffer.append(line);
                 }
 
