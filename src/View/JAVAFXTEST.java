@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -38,32 +39,38 @@ public class JAVAFXTEST extends Application {
         public void start(Stage primaryStage) {
             primaryStage.setTitle("JavaFX Welcome");
             GridPane grid = new GridPane();
+
             grid.setAlignment(Pos.CENTER);
             grid.setHgap(10);
             grid.setVgap(10);
             grid.setPadding(new Insets(25, 25, 25, 25));
 
+            BorderPane borderPane = new BorderPane();
+
             Text text = new Text(Util.storyString(currentStoryName));
             text.setFont(Font.font("times new roman", FontWeight.NORMAL, 14));
             grid.add(text, 0, 0, 4, 4);
+            borderPane.setTop(text);
 
-
-            Button btn1 = new Button("");
+            Button btn1 = new Button("1");
+            Button btn2 = new Button("2");
 
             HBox hbBtn = new HBox(10);
-            hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-            hbBtn.getChildren().add(btn1);
-            grid.add(hbBtn, 1, 4);
-
-            grid.getChildren().add(btn1);
-            btn1.setAlignment(Pos.CENTER);
+            hbBtn.getChildren().addAll(btn1, btn2);
+            borderPane.setCenter(hbBtn);
+            //grid.add(hbBtn, 2, 4);
 
             btn1.setOnAction(event -> {
                 currentStoryName = Util.newStoryString("1", currentStoryName);
                 text.setText(Util.storyString(currentStoryName));
             });
 
-            Scene scene = new Scene(grid, 600, 600);
+            btn2.setOnAction(event -> {
+                currentStoryName = Util.newStoryString("2", currentStoryName);
+                text.setText(Util.storyString(currentStoryName));
+            });
+
+            Scene scene = new Scene(borderPane, 600, 600);
             primaryStage.setScene(scene);
             primaryStage.show();
         }
