@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.Player;
-import View.Game;
 
 import java.io.*;
 
@@ -20,7 +19,6 @@ public class Util {
     private static ObjectInputStream objin = null;
     private static Player player;
     //private static Player returnPlayer; BRUGES DEN?!?!
-
 
     public static File createPlayerFile(){
         try {

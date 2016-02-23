@@ -1,9 +1,7 @@
 package Controller;
 
 import Model.Player;
-import View.Game;
 
-import java.io.IOException;
 import java.util.Random;
 
 /**

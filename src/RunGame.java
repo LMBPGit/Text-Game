@@ -1,7 +1,7 @@
 /**
  * Created by Razer on 18-12-2015.
  */
-import View.GameMenu;
+import Controller.GameMenu;
 
 public class RunGame {
 

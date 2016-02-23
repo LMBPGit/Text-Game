@@ -1,9 +1,9 @@
-package View;
+package Controller;
 
 /**
  * Created by Razer on 18-12-2015.
  */
-import Controller.Events;
+import Controller.Game;
 import Controller.Util;
 import Model.Player;
 

@@ -5,6 +5,6 @@ and are now on your way to the evil castle.
 2. try to pick the lock(Ranger only)
 stop
 
-valgA10
+valgA9
 
-valgB11RangerJobEvent
+valgB10RangerJobEvent

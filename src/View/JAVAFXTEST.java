@@ -30,8 +30,9 @@ import java.util.Scanner;
 public class JAVAFXTEST extends Application {
 
     private static Scanner scan;
-    private static String userInput, currentStoryName, nextStory;
-    private static boolean running;
+    private static String userInput, nextStory;
+    private static String currentStoryName = "1";
+    private static boolean running = true;
 
         @Override
         public void start(Stage primaryStage) {
@@ -42,52 +43,30 @@ public class JAVAFXTEST extends Application {
             grid.setVgap(10);
             grid.setPadding(new Insets(25, 25, 25, 25));
 
-            currentStoryName = "1";
-            running = true;
-                Text scenetitle = new Text(Util.storyString(currentStoryName));
-                scenetitle.setFont(Font.font("times new roman", FontWeight.NORMAL, 14));
-                grid.add(scenetitle, 0, 0, 2, 1);
-
-                Circle circle = new Circle();
-                circle.setRadius(40);
-                circle.setFill(Color.DEEPPINK);
-                grid.add(circle, 0,0);
+            Text text = new Text(Util.storyString(currentStoryName));
+            text.setFont(Font.font("times new roman", FontWeight.NORMAL, 14));
+            grid.add(text, 0, 0, 4, 4);
 
 
-                Button btn1 = new Button("Sign in");
-                HBox hbBtn1 = new HBox(10);
-                hbBtn1.setAlignment(Pos.BOTTOM_RIGHT);
-                hbBtn1.getChildren().add(btn1);
-                grid.add(hbBtn1, 1, 4);
+            Button btn1 = new Button("");
 
+            HBox hbBtn = new HBox(10);
+            hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
+            hbBtn.getChildren().add(btn1);
+            grid.add(hbBtn, 1, 4);
 
-                Text actiontarget = new Text();
-                grid.add(actiontarget, 1, 6);
+            grid.getChildren().add(btn1);
+            btn1.setAlignment(Pos.CENTER);
 
-                btn1.setOnAction(new EventHandler<ActionEvent>() {
+            btn1.setOnAction(event -> {
+                currentStoryName = Util.newStoryString("1", currentStoryName);
+                text.setText(Util.storyString(currentStoryName));
+            });
 
-                    @Override
-                    public void handle(ActionEvent event) {
-                        userInput = "1";
-                        actiontarget.setFont(Font.font("times new roman"));
-                        actiontarget.setFill(Color.DARKBLUE);
-                        actiontarget.setText("HEYOOOO YO");
-                        if (userInput.equals("1")) {
-                            System.out.println("hi");
-
-                        }
-                        currentStoryName = Util.newStoryString(userInput, currentStoryName);
-
-                    }
-                });
-
-
-
-
-                Scene scene = new Scene(grid, 600, 600);
-                primaryStage.setScene(scene);
-                primaryStage.show();
-            }
+            Scene scene = new Scene(grid, 600, 600);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
 
     public static void main(String[] args) {
         launch(args);

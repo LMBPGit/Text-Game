@@ -7,5 +7,3 @@ stop
 valgA4
 
 valgB5DiceEvent5
-
-valgC6JobWarriorEvent
