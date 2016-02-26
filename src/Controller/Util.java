@@ -175,6 +175,11 @@ public class Util {
         Game.currentStoryName = player.getSavePoint();
     }
 
+    public static void saveGame(String currentStoryName){
+        player = loadPlayer();
+        player.setSavePoint(currentStoryName);
+    }
+
     public enum playerRaces {
         HUMAN("Human race"),
         Elf("Elvish race"),

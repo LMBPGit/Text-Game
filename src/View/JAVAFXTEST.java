@@ -54,9 +54,10 @@ public class JAVAFXTEST extends Application {
 
             Button btn1 = new Button("1");
             Button btn2 = new Button("2");
+            Button btnQuit = new Button("quit");
 
             HBox hbBtn = new HBox(10);
-            hbBtn.getChildren().addAll(btn1, btn2);
+            hbBtn.getChildren().addAll(btn1, btn2, btnQuit);
             borderPane.setCenter(hbBtn);
             //grid.add(hbBtn, 2, 4);
 
@@ -68,6 +69,11 @@ public class JAVAFXTEST extends Application {
             btn2.setOnAction(event -> {
                 currentStoryName = Util.newStoryString("2", currentStoryName);
                 text.setText(Util.storyString(currentStoryName));
+            });
+
+            btnQuit.setOnAction(event -> {
+                //Util.saveGame(currentStoryName);
+                primaryStage.close();
             });
 
             Scene scene = new Scene(borderPane, 600, 600);
