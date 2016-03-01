@@ -1,5 +1,6 @@
 package View;
 
+import Model.StoryModel;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -64,6 +65,8 @@ public class JAVAFXTEST extends Application {
             btn1.setOnAction(event -> {
                 currentStoryName = Util.newStoryString("1", currentStoryName);
                 text.setText(Util.storyString(currentStoryName));
+                //StoryModel storyModel = new StoryModel("", 1, "");
+                //text.setText(storyModel.toString());
             });
 
             btn2.setOnAction(event -> {

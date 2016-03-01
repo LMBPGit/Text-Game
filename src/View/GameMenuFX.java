@@ -2,8 +2,7 @@ package View;
 
 import javafx.application.Application;
 
-public class GameMenuFX extends Application{
-
+public class GameMenuFX{
 
 
 

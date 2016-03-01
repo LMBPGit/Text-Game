@@ -55,13 +55,12 @@ public class Util {
     public static Player loadPlayer(){
         Player returnPlayer = null;
         try{
-            if(playerFile.length() !=0) {
+            if(playerFile != null) {
                 objin = new ObjectInputStream(new BufferedInputStream(new FileInputStream(playerFile)));
                 returnPlayer = (Player) objin.readObject();
             }
         }catch(FileNotFoundException e){
             e.printStackTrace();
-
         }catch(IOException e){
             e.printStackTrace();
 
@@ -172,12 +171,15 @@ public class Util {
 
     public static void loadGame(){
         player = loadPlayer();
+        System.out.println(player.getSavePoint());
         Game.currentStoryName = player.getSavePoint();
     }
 
     public static void saveGame(String currentStoryName){
         player = loadPlayer();
-        player.setSavePoint(currentStoryName);
+        System.out.println(player);
+        //player.setSavePoint(Game.currentStoryName);
+        savePlayer(player);
     }
 
     public enum playerRaces {
